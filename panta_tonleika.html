@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jol.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Pantanir</title>
+</head>
+<body>
+        
+    <header>
+
+        <picture class="bakgrunnsmynd">
+            <source media="(min-width:1200px)" srcset="myndir/reykjavik_bakgrunnur_stor.jpg">
+            <source media="(min-width:1024px)" srcset="myndir/reykjavik_bakgrunnur_talva.jpg">
+            <source media="(min-width:768px)" srcset="myndir/reykjavik_bakgrunnur_spjaldtalva.jpg">
+            <source media="(min-width:480px)" srcset="myndir/reykjavik_bakgrunnur_simi.jpg">
+            <img src="myndir/reykjavik_bakgrunnur.jpg" alt="" style="width:auto;">
+        </picture>
+
+        <img src="myndir/vektormynd.svg" class="vektormynd">
+
+        <div class="textarammi">
+            <h1>Jólaglaðningur Brass kvintettsins</h1>
+        </div>
+
+    </header>
+
+    <input type="checkbox" id="smella">
+    <label class="hamborgaramerki" for="smella">&#9776;</label>
+    
+    <nav>
+        <a href="index.html"><span class="icon-home3"></span> Heimasíða</a>
+        <a href="vidburdir.html"><span class="icon-table2"></span> Viðburðir</a>
+    </nav>
+
+    <main class="aukasida_main">
+        <form method="" action="#">
+            <section>
+                <label>Nafn:</label>
+                <br>
+                <input type="text" name="nafn" required>
+                <br>
+                <label>Símanúmer:</label>
+                <br>
+                <input type="number" name="simi" required>
+                <br>
+                <label>Netfang:</label>
+                <br>
+                <input type="email" name="netfang" required>
+                <br>
+            </section>
+            <section>
+                <label>Dagsettning tónleika:</label>
+                <br>
+                <input type="date" name="dags" required>
+                <br>
+                <label>Tímasettning tónleika: </label>
+                <br>
+                <input type="time" name="timi" required>
+                <br>
+                <label>Staðsettning tónleika: </label>
+                <br>
+                <input type="text" name="stadsettning" required>
+                <br>
+            </section>
+            <section>
+                <label>Eitthvað annað sem þú vilt koma á framfæri?</label>
+                <br>
+                <textarea></textarea>
+                <br>
+            </section>
+            <section>
+            <input type="checkbox" name="ekki_velmenni" required> Ég er ekki vélmenni
+            <br>
+            </section>
+            <input type="submit" value="skrá" class="skra_takki">
+
+        </form>
+    </main>
+
+    <footer>
+
+        <section>
+            <a href="#"><span class="icon-facebook2"></span> @brasskvintettrvk</a>
+            <a href="#"><span class="icon-instagram"></span> @brasskvintettrvk</a>
+            <a href="#"><span class="icon-mail"></span> brass.kvintett.rvk@gmail.com</a>
+            <a href="#"><span class="icon-mobile"></span> 123 123 4</a>
+        </section>
+
+        <img srcset="myndir/footermynd.svg" class="graen_skotthufa">
+
+        <h3>Brass Kvintett Reykjavíkur</h3>
+
+    </footer>
+
+</body>
+</html>

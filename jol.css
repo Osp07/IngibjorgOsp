@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Limelight&display=swap');
+
+/* GRUNNSTILLINGAR */
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #1d0f6d;
+    font-family: "Crimson Text", "Serif";
+}
+
+img{
+    max-width: 100%;
+    margin: auto;
+}
+a:hover{
+    font-weight: bold;
+}
+/*--------------------*/
+
+/* VALMYNDASTILLINGAR */
+#smella{
+    display: none;
+}
+
+.hamborgaramerki{
+    color: white;
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+}
+
+nav{
+    padding: 30px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    left: -300px;
+    max-width: 300px;
+    position: absolute;
+    transition: 2s all;
+    overflow: hidden;
+    background-color: #d41616;
+    z-index: 1;
+}
+
+nav a{
+    text-decoration: none;
+    color: black
+}
+
+#smella:checked ~ nav{ /* ~ tengir saman systkini */
+    left: 0px;
+}
+/*--------------------*/
+
+/* HEADER STILLINGAR */
+header{
+    position: relative;
+    align-content: center;
+}
+
+.vektormynd{
+    position: absolute;
+    width: 50px;
+    top: 20px;
+    left: 20px;
+}
+
+.textarammi{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: transparent;
+    padding: 20px;
+}
+
+h1{
+    /*
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    */
+    text-align: center;
+    font-family: "limelight", "sans-serif";
+    font-size: 30px;
+    color: #ffd700;
+    text-shadow: 10px 10px 20px #1d0f6d, -10px 10px 20px #1d0f6d,10px -10px 20px #1d0f6d,-10px -10px 20px #1d0f6d;
+}
+/*--------------------*/
+
+
+/* MEGINMÁLS STÍLAR */
+.aukasida_main{
+    margin: auto;
+    max-width: 80%;
+    color: white;
+}
+
+.heimasida_main{
+    padding:30px 20px 30px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+}
+
+.heimasida_main a{
+    color: white;
+}
+
+.vinstri_snjokall,.haegri_snjokall{
+    display: none;
+}
+
+main p{
+    font-family: "Crimson Text", "Serif";
+    color: white;
+}
+/*----------------*/
+
+/*SKIGGNU STILLINGAR*/
+.skiggnur{
+    margin: 30px auto;
+    width: 300px;
+    height: 200px;
+    border: 5px dotted red;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.skiggnur div{
+    width: 300px;
+    height: 200px;
+    animation: slide 20s ease-in-out infinite alternate;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+}
+
+@keyframes slide{
+    0%,15%{transform: translateX(0px);}
+    25%,40%{transform: translateX(-300px);}
+    50%,65%{transform: translateX(-600px);}
+    75%,100%{transform: translateX(-900px);}
+}
+/*--------------------*/
+
+
+/*FORM STILLINGAR*/
+input{
+    margin: 20px;
+    max-width: 80%;
+}
+form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #308505;
+    padding: 20px;
+}
+/*LÁTA TAKKA FÆRAST TIL VINSTRI*/
+.skra_takki{
+    max-width: fit-content;
+}
+/*--------------------*/
+
+/* FOOTER STILLINGAR */
+footer{
+    padding: 30px;
+    margin-bottom: -30px;
+    background-color: #d41616;
+}
+
+footer section a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 15px;
+}
+
+footer p{
+    font-size: 15px;
+}
+footer h3{
+    margin: 30px;
+    text-align: center;
+}
+
+/*MEDIA QUERIES*/
+
+/*SPJALDTALVA*/
+@media screen and (min-width: 480px){
+
+    h1{
+        font-size: 40px;
+    }
+
+    .vektormynd{
+        width: 75px;
+    }
+
+    .textarammi{
+        top: 75px;
+    }
+
+    .mynd{
+        margin: 0px 30px 0px 0px;
+    }
+
+    footer div{
+        margin: 10px;
+    }
+
+    footer section a{
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    
+    .haegri_snjokall{
+        animation: hristist 2s ease-in-out infinite alternate;
+    }
+    .vinstri_snjokall{
+        animation: hristist 2s ease-in-out infinite alternate;
+    }
+    /*SNJÓKALL ANIMATION*/
+    @keyframes hristist{
+        from{transform: rotate(-5deg);}
+        to{transform: rotate(5deg);}
+    }
+    /*--------------------*/
+    h1{
+        font-size: 60px;
+    }
+
+    .vektormynd{
+        width: 150px;
+    }
+
+    .textarammi{
+        top: 150px;
+    }
+
+    nav{
+        padding: 10px;
+        text-align: center;
+        margin-top: -9px;
+        position: relative;
+        display: grid;
+        left: 0;
+        grid-template-columns: repeat(2,1fr);
+        max-width: 100%;
+    }
+
+    .hamborgaramerki{
+        display: none;
+    }
+
+    .vinstri_snjokall,.haegri_snjokall{
+        display: grid;
+    }
+
+    .heimasida_main{
+        grid-template-columns: 1fr 2fr 3fr 1fr;
+    }
+
+    .heimasida_main aside{
+        margin: auto 20px auto 10px;
+    }
+    .skiggnur{
+        margin: auto 10px auto 20px;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    h1{
+        font-size: 70px;
+    }
+}

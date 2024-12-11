@@ -1,0 +1,50 @@
+/*GERA TÖFLUNA LJÓSGRÆNA OG GRÆNA TIL SKIPTIS*/
+table{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    border: 3px solid white;
+    width: 100%
+}
+
+th{
+    background-color: darkgreen;
+}
+tr{
+    background-color: green;
+}
+tr:nth-child(even){
+    background-color: darkgreen;
+}
+
+thead tr th{
+    border: 3px solid white;
+}
+
+tbody tr td{
+    border: 3px solid white;
+    padding: 5px 15px 5px 15px;
+}
+
+@media screen and (max-width: 760px){
+    table{
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    thead{
+        display: none;
+    }
+    tbody tr td{
+        display: block;
+        text-align: right;
+        border: 1.5px solid white;
+    }
+    tbody tr{
+        display: block;
+    }
+    tbody tr td::before{
+        content:attr(haus);
+        float: left;
+        font-weight: bold;
+    }
+}
